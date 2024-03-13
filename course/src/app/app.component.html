@@ -1,7 +1,12 @@
 <section class="app-wrapper">
+  <div class="app-container">
+    {{ title }}
 
+    <input
+      #titleReference
+      type="text"
+      [value]="title"
+      (keyup)="onKeyUp(titleReference.value)"
+    />
+  </div>
 </section>
-{{ title }}
-
-
-<input type="text">
