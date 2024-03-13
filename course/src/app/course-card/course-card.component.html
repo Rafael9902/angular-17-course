@@ -1,3 +1,16 @@
-<h1>{{ data }}</h1>
-
-<button (click)="onSelect()">Select</button>
+<div class="cards-container">
+  <ul class="cards-list">
+    @for (
+      item of data;
+      track item.name;
+      let index = $index;
+      let count = $count
+    ) {
+      <li class="card" (click)="onSelect(index)">
+        {{ item.name }}
+      </li>
+    } @empty {
+      <h1>No elements found</h1>
+    }
+  </ul>
+</div>

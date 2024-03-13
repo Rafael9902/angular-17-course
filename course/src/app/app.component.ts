@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     this.title = title;
   }
 
-  onSelect(selected: boolean) {
-    alert(selected);
+  onSelect(index: number) {
+    alert(index);
   }
 }

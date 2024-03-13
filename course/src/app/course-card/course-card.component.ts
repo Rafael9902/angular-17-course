@@ -13,9 +13,9 @@ export class CourseCardComponent {
   data!: projectData[];
 
   @Output()
-  select = new EventEmitter<boolean>();
+  select = new EventEmitter<number>();
 
-  onSelect() {
-    this.select.emit(true);
+  onSelect(index: number) {
+    this.select.emit(index);
   }
 }
