@@ -8,5 +8,10 @@
       [value]="title"
       (keyup)="onKeyUp(titleReference.value)"
     />
+
+    <app-course-card
+      [data]="data"
+      (select)="onSelect($event)"
+    ></app-course-card>
   </div>
 </section>
